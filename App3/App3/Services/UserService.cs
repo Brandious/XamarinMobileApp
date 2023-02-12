@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Firebase.Database.Query;
 namespace App3.Services
 {
-    internal class UserService
+    public class UserService
     {
         FirebaseClient client;
 
