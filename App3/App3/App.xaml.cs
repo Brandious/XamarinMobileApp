@@ -1,4 +1,5 @@
-﻿using System;
+﻿using App3.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace App3
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new LoginView();
         }
 
         protected override void OnStart()
