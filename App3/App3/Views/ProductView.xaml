@@ -7,6 +7,10 @@
              xmlns:vm="clr-namespace:App3.ViewModels"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.UseSafeArea="true">
+
+    <ContentPage.BindingContext>
+        <vm:ProductViewModel />
+    </ContentPage.BindingContext>
   <ContentPage.Content>
         <Grid Margin="20, 0, 0,0 ">
             <Grid.RowDefinitions>
@@ -35,16 +39,16 @@
                 </Grid.ColumnDefinitions>
 
                 <Label Text="Welcome " Grid.Row="0" Grid.Column="0" TextColor="Silver"/>
-                <Label Text="{Binding UserName}" Grid.Row="1" Grid.Column="0" FontSize="20"/>
+                <Label Text="{Binding Username}" Grid.Row="1" Grid.Column="0" FontSize="20"/>
 
-                <ImageButton Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Source="{FontImage FontFamily=FontAwesome, Glyph={x:Static helpers: IconFont.ViewList}, Size=40, Color=Purple}" Margin="0,0,10,0" HorizontalOptions="End" />
+                <ImageButton Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Source="{FontImage FontFamily=FontAwesome, Glyph={x:Static helpers:IconFont.ViewList}, Size=40, Color=Purple}" Margin="0,0,10,0" HorizontalOptions="End" />
 
                 <Label Text="{Binding UserCartItemsCount}" FontSize="Subtitle" Grid.Row="0" Grid.Column="2" Grid.RowSpan="2" HorizontalTextAlignment="End" VerticalTextAlignment="Start" />
 
 
-                <ImageButton Grid.Row="0" Grid.Column="2" Grid.RowSpan="2" Source="{FontImage FontFamily=FontAwesome, Glyph={x:Static helpers: IconFont.Shopping}, Size=40, Color=Green}" Margin="0,0,10,0" HorizontalOptions="End" Command="{Binding ViewCartCommand}"/>
+                <ImageButton Grid.Row="0" Grid.Column="2" Grid.RowSpan="2" Source="{FontImage FontFamily=FontAwesome, Glyph={x:Static helpers:IconFont.Shopping}, Size=40, Color=Green}" Margin="0,0,10,0" HorizontalOptions="End" Command="{Binding ViewCartCommand}"/>
 
-                <ImageButton Grid.Row="0" Grid.Column="3" Grid.RowSpan="2" Source="{FontImage FontFamily=FontAwesome, Glyph={x:Static helpers: IconFont.Logout}, Size=40, Color=Red}" Margin="0,0,10,0" HorizontalOptions="End" Command="{Binding LogoutCommand}"/>
+                <ImageButton Grid.Row="0" Grid.Column="3" Grid.RowSpan="2" Source="{FontImage FontFamily=FontAwesome, Glyph={x:Static helpers:IconFont.Logout}, Size=40, Color=Red}" Margin="0,0,10,0" HorizontalOptions="End" Command="{Binding LogoutCommand}"/>
 
             </Grid>
 
@@ -56,7 +60,7 @@
 
 
                 <SearchBar Grid.Column="0" Placeholder="Search Food" BackgroundColor="Transparent" HorizontalOptions="Fill"/>
-                <ImageButton Grid.Column="1"  Source="{FontImage FontFamily=FontAwesome, Glyph={x:Static helpers: IconFont.SearchWeb}, Size=40, Color=Black}" Margin="0,0,10,0" HorizontalOptions="End"/>
+                <ImageButton Grid.Column="1"  Source="{FontImage FontFamily=FontAwesome, Glyph={x:Static helpers:IconFont.SearchWeb}, Size=40, Color=Black}" Margin="0,0,10,0" HorizontalOptions="End"/>
 
 
             </Grid>

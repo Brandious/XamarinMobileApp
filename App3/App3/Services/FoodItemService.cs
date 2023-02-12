@@ -62,6 +62,9 @@ namespace App3.Services
                 latestFoodItems.Add(item);
 
             }
+
+            return latestFoodItems;
         }
+
     }
 }

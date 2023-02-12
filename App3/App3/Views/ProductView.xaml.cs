@@ -1,4 +1,5 @@
-﻿using System;
+﻿using App3.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,18 @@ namespace App3.Views
         public ProductView()
         {
             InitializeComponent();
+        }
+
+        async void CollectionView_SelectionChanged(Object sender, SelectionChangedEventArgs e) {
+            var category = e.CurrentSelection.FirstOrDefault() as Category;
+
+            if (category == null)
+                return;
+
+            await Navigation.PushModalAsync(new CategoryView(category));
+
+            ((CollectionView)sender).SelectedItem = null;
+
         }
     }
 }

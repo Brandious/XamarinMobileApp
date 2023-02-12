@@ -28,7 +28,7 @@ namespace App3.Services
                 ImageUrl = c.Object.ImageUrl
             }).ToList();
 
-            return categories
+            return categories;
         }
     }
 }

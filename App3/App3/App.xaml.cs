@@ -1,5 +1,6 @@
 ﻿using App3.Views;
 using System;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +12,18 @@ namespace App3
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new SettingsPage());
+            // MainPage = new NavigationPage(new SettingsPage());
+            string uname = Preferences.Get("Username", String.Empty);
+
+            if(String.IsNullOrEmpty(uname))
+            {
+                MainPage = new LoginView();
+            }
+            else
+            {
+                MainPage= new ProductView();  
+            }
+
         }
 
         protected override void OnStart()
