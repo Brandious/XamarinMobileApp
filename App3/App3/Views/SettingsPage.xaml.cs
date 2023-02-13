@@ -23,5 +23,15 @@ namespace App3.Views
         async void ButtonProducts_Clicked(object sender, EventArgs e) { var afd = new AddFoodItem();
             await afd.AddFoodItemAsync();
         }
+
+        async void ButtonCartItems_Clicked(object sender, EventArgs e)
+        {
+            var ci = new CreateCartTable();
+            if (ci.CreateTable())
+                DisplayAlert("Success", "Cart Table Created", "OK");
+            else
+                DisplayAlert("Error", "Error while creating table", "OK");
+            
+        }
     }
 }

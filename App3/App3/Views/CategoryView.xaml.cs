@@ -25,13 +25,13 @@ namespace App3.Views
             this.BindingContext = cvm;
         }
 
-        async void ImageButton_Clicked(object sender, EventArgs e)
+        async void ImageButton_Clicked(Object sender, EventArgs e)
         {
             await Navigation.PopModalAsync();
         }
-        private async void CollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        async void CollectionView_SelectionChanged(Object sender, SelectionChangedEventArgs e)
         {
-            var selectedProduct = e.CurrentSelection.FirstOrDefault() as FoodItem;
+            var selectedProduct =  e.CurrentSelection as FoodItem;
             if (selectedProduct != null)
             {
                 return;
@@ -41,5 +41,9 @@ namespace App3.Views
 
             ((CollectionView)sender).SelectedItem = null;
         }
+
+       
+
+           
     }
 }

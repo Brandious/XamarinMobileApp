@@ -52,19 +52,7 @@
 
             </Grid>
 
-            <Grid Grid.Row="1" Grid.Column="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-
-
-                <SearchBar Grid.Column="0" Placeholder="Search Food" BackgroundColor="Transparent" HorizontalOptions="Fill"/>
-                <ImageButton Grid.Column="1"  Source="{FontImage FontFamily=FontAwesome, Glyph={x:Static helpers:IconFont.SearchWeb}, Size=40, Color=Black}" Margin="0,0,10,0" HorizontalOptions="End"/>
-
-
-            </Grid>
-
+         
             <CollectionView ItemsSource="{Binding Categories}"
                             Margin="0,20"
                             HeightRequest="125" VerticalOptions="FillAndExpand"
@@ -100,16 +88,15 @@
                                 </Grid.RowDefinitions>
 
                                 <pancale:PancakeView Grid.Row="0" CornerRadius="20" Margin="0, 0,10,0" >
-                                    <Image Source="{Binding ImageUrl}" HeightRequest="22" Aspect="Fill"/>
+                                    <Image Source="{Binding ImageUrl}" HeightRequest="220" Aspect="AspectFill"/>
                                 </pancale:PancakeView>
 
-                                <Frame Grid.Row="1" Margin="20, -80, 20, 70" BackgroundColor="White" CornerRadius="25" HorizontalOptions="End">
+                                <Frame Grid.Row="1" Margin="20, -100, 20, 70" BackgroundColor="White" CornerRadius="25" HorizontalOptions="End">
                                     <Label Text="{Binding Price, StringFormat='{0:c}'}" FontSize="Medium" FontAttributes="Bold" TextColor="Black" HeightRequest="10"/>
                                 </Frame>
                                 
                                 <Label Grid.Row="1" Text="{Binding Name}" FontSize="22" FontAttributes="Bold" VerticalTextAlignment="Center"/>
-                                <Image Grid.Row="2" Source="Star" HorizontalOptions="Start" WidthRequest="20"/>
-                                <Label Grid.Row="2" Margin="30,0,0,0" FontSize="15" VerticalOptions="Center">
+                                <Label Grid.Row="2" Margin="0,0,0,0" FontSize="15" VerticalOptions="Center">
                                     <Label.FormattedText>
                                         <FormattedString>
                                             <Span Text="{Binding Rating}" FontAttributes="Bold" />

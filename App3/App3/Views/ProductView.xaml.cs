@@ -27,7 +27,6 @@ namespace App3.Views
             await Navigation.PushModalAsync(new CategoryView(category));
 
             ((CollectionView)sender).SelectedItem = null;
-
         }
     }
 }

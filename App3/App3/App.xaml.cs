@@ -12,7 +12,7 @@ namespace App3
         {
             InitializeComponent();
 
-            // MainPage = new NavigationPage(new SettingsPage());
+           // MainPage = new NavigationPage(new SettingsPage());
             string uname = Preferences.Get("Username", String.Empty);
 
             if(String.IsNullOrEmpty(uname))

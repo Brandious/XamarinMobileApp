@@ -6,6 +6,8 @@
         <StackLayout>
             <Button Text="Manage Categories" x:Name="ButtonCagories" Clicked="ButtonCategories_Clicked" />
             <Button Text="Manage Products" x:Name="ButtonProducts" Clicked="ButtonProducts_Clicked" />
+            <Button Text="Manage Cart Items" x:Name="ButtonCartItems" Clicked="ButtonCartItems_Clicked" />
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

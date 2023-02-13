@@ -5,6 +5,7 @@
              xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              
              x:Class="App3.Views.CategoryView">
+
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
@@ -78,7 +79,7 @@
                                                 </Label.FormattedText>
                                             </Label>
 
-                                            <Image Grid.Row="0" Grid.Column="2" Source="Binding HomeSelected" HeightRequest="15"/>
+                                            <Image Grid.Row="0" Grid.Column="2" Source="{Binding HomeSelected}" HeightRequest="15"/>
                                         </Grid> 
                                     </Frame>
                                 </StackLayout>
